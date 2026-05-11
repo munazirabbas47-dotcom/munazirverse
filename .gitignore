@@ -1,0 +1,53 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Logs
+*.log
+
+# Gunicorn
+gunicorn.pid
+
+# Render
+.render/
+
+# Migrations Cache
+*.sqlite3-journal
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# Node Modules (if frontend used)
+node_modules/
+
+# Secret Keys
+secret_key.txt
