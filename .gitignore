@@ -13,6 +13,7 @@ staticfiles/
 venv/
 env/
 ENV/
+myprojectenv
 
 # Environment Variables
 .env
