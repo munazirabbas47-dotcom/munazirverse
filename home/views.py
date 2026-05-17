@@ -1,13 +1,16 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Contact
+from .models import Contact , About 
+from blog .models import BlogPost
 
 
 
 # Create your views here.
 
 def home(request):
-    return render(request, "home/index.html")
+    # blog = BlogPost.objects.all()[:2]
+    blog = BlogPost.objects.order_by('-publish_date')[:2]
+    return render(request, "home/index.html",{"blog":blog})
     
 def contact(request):
 
@@ -23,4 +26,5 @@ def contact(request):
     return render(request, "home/contact.html")
 
 def about(request):
-    return render(request, "home/about.html")
+    myabout = About.objects.all()
+    return render(request, "home/about.html",{"myabout":myabout})

@@ -13,7 +13,7 @@ phone_validator = RegexValidator(
 # create model for contact
 class Contact(models.Model):
     sno = models.AutoField(primary_key=True)
-    
+
     name = models.CharField(
         max_length=255,
         validators=[
@@ -42,3 +42,24 @@ class Contact(models.Model):
 
     def __str__(self):
         return "Message From " + self.name + " - " + self.email
+    
+
+
+    # crate model for about us
+
+
+class About(models.Model):
+    heading1 = models.CharField(max_length=255)
+    paragraph1 = models.CharField(max_length=500)
+    image = models.ImageField(upload_to="home_image/", default="")
+    heading2 = models.CharField(max_length=255)
+    paragraph2 = models.CharField(max_length=500)
+    paragraph3 = models.CharField(max_length=500)
+    paragraph4 = models.CharField(max_length=500)
+    publish_date = models.DateField()
+
+    def __str__(self):
+        return self.heading2
+        
+
+

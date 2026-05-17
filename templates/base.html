@@ -29,24 +29,22 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item {% block homeactive %}{% endblock%}">
                     <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {% block aboutactive %}{% endblock%}">
                     <a class="nav-link" href="/about">About Us</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item {% block contactactive %}{% endblock%}">
                     <a class="nav-link" href="/contact">Contact Us</a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item {% block blogactive %}{% endblock%}">
                     <a class="nav-link" href="/blog">Blog</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/shop/tracker">Tracker</a>
-                </li>
+                
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
@@ -58,6 +56,44 @@
     </nav>
 
     {% block body %} {% endblock %}
+
+    
+  <footer class="bg-dark text-light pt-5 pb-3 mt-auto">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4">
+                <h5>MCoder Blog</h5>
+                <p>
+                    Django Developer Munazir Abbas ka tech blog jahan aapko coding tutorials milenge.
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/" class="text-light text-decoration-none">Home</a></li>
+                    <li><a href="/blog/" class="text-light text-decoration-none">Blog</a></li>
+                    <li><a href="/contact" class="text-light text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4">
+                <h5>Contact</h5>
+                <p>Email: munazirabbas47@gmail.com</p>
+                <p>Pakistan</p>
+            </div>
+
+        </div>
+
+        <hr class="bg-light">
+
+        <div class="text-center">
+            <small>© 2026 MCoder Blog | Munazir Abbas</small>
+        </div>
+    </div>
+</footer>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 

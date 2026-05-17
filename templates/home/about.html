@@ -1,9 +1,49 @@
 {% extends 'base.html' %}
 
 {% block title %} About -Us{% endblock %}
+{% block aboutactive %}active{% endblock%}
 
 {% block body %} 
+{% for about in myabout %}
+<div class="container mt-5">
 
-<h1> Hello About</h1>
+    <div class="text-center mb-5">
+        <h1>{{about.heading1}}</h1>
+        <p class="text-muted">{{about.paragraph1}}</p>
+    </div>
+
+    <div class="row align-items-center">
+
+        <!-- IMAGE -->
+        <div class="col-md-5 text-center">
+            <img src="{{about.image.url}}" class="img-fluid rounded-circle shadow">
+        </div>
+
+        <!-- TEXT -->
+        <div class="col-md-7">
+
+            <h3>{{about.heading2}}</h3>
+
+            <p>
+                {{ about.paragraph2|safe }}
+            </p>
+
+            <p>
+                {{about.paragraph3}}
+            </p>
+
+            <p>
+                {{about.paragraph4}}
+            </p>
+
+            <a href="/blog/" class="btn btn-dark mt-3">View My Blogs</a>
+
+        </div>
+
+    </div>
+
+</div>
+{% endfor %}
 
 {% endblock %}
+{% block footer %}{% endblock %}

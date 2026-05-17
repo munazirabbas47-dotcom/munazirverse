@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %} Contact -Us{% endblock %}
+{% block contactactive %}active{% endblock%}
 
 {% block body %} 
 
@@ -29,6 +30,7 @@
             <button type="submit" class="btn btn-success">Submit</button>
     </form>
 </div>
+</div>
 {% endblock %}
 
 {% block js%}
@@ -42,4 +44,7 @@
 
 </script>
 
+{% endblock %}
+
+{% block footer %}
 {% endblock %}
