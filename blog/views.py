@@ -10,8 +10,8 @@ def blogHome(request):
     allblog = BlogPost.objects.all()
     return render(request, "blog/index.html",{"allblog":allblog})
 
-def blogPost(request,id):
-    post = BlogPost.objects.filter(post_id=id).first()
+def blogPost(request,slug):
+    post = BlogPost.objects.filter(slug=slug).first()
     
     return render(request, "blog/blogpost.html",{"post":post})
     

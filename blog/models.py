@@ -12,6 +12,7 @@ class BlogPost(models.Model):
     contant3 = models.CharField(max_length=5000,default="")
     publish_date = models.DateField()
     thumbnail = models.ImageField(upload_to="blog_image",default="")
+    slug = models.CharField(max_length=130)
     
     def __str__(self):
         return self.title
