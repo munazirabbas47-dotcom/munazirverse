@@ -47,7 +47,7 @@
     <div class="row">
 
         <!-- LEFT BLOG LIST -->
-        <div class="col-md-8">
+        <div class="col-md-8 my-4">
             
             {% for blog in allblog %}
             <!-- POST  -->
@@ -55,7 +55,7 @@
                 <img src="{{blog.thumbnail.url}}" style="width:150px;">
                 <div>
                     <h5>{{blog.heading1}}</h5>
-                    <p class="text-muted">{{blog.contant1|slice:"0:150"}}</p>
+                    <p class="text-muted">{{blog.contant1 | truncatechars:200}}</p>
                     <small>{{blog.publish_date}}</small>
                     <a href="/blog/blog/blogpost/{{blog.post_id}}" class="btn btn-dark btn-sm">
                         Read More
